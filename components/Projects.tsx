@@ -23,7 +23,9 @@ const Projects = ({ projects }: Props) => {
             <div className='relative flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
             scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
                 {projects?.map((proj, i) => (
-                    <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-2
+                    <div 
+                    key={proj._id}
+                    className='w-screen flex-shrink-0 snap-center flex flex-col space-y-2
                 items-center justify-center p-20 md:p-44 h-screen'>
                         <motion.img
                             initial={{
@@ -45,7 +47,7 @@ const Projects = ({ projects }: Props) => {
                             </h4>
                             <div className='flex items-center justify-center'>
                                 {proj?.technologies.map((tecnhologie) => (
-                                    <img className='h-10 w-15'
+                                    <img className='h-8 w-11'
                                         key={tecnhologie._id}
                                         src={urlFor(tecnhologie.image).url()}
                                         alt=""
