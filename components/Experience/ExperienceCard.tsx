@@ -23,7 +23,7 @@ const ExperienceCard = ({experience}: Props) => {
         <h4 className='text-4xl font-light'>{experience?.jobTitle}</h4>
         <p className='font-bold text-2xl mt-1'>{experience?.company}</p>
         <div className='flex space-x-2 my-2'>
-         {experience.technologies.map((tecnhology)=>(
+         {experience?.technologies.map((tecnhology)=>(
           <img
             key={tecnhology._id}
             className="h-12 w-15 rounded-full"
@@ -32,11 +32,11 @@ const ExperienceCard = ({experience}: Props) => {
          ))}
         </div>
         <p className='uppercase py-5 text-gray-300'>
-          {new Date(experience.dateStarted).toDateString()}-{" "}
-          {experience.isCurrentlyWorkingHere ? "Present" : new Date(experience.dateEnded).toDateString()}
+          {new Date(experience?.dateStarted).toDateString()}-{" "}
+          {experience?.isCurrentlyWorkingHere ? "Present" : new Date(experience?.dateEnded).toDateString()}
         </p>
         <ul className='list-disc space-y-4 ml-5 text-lg  '>
-          {experience.points.map((point,i) =>(
+          {experience?.points.map((point,i) =>(
             <li key={i}>{point}</li>
           ))}
           

@@ -41,7 +41,7 @@ const Projects = ({ projects }: Props) => {
                         <div className='px-0 md:px-10 max-w-6xl'>
                             <h4 className='text-3xl font-semibold text-center'>
                                 <span className='underline decoration-[#F7AB0A]/50'>
-                                    Case study {i + 1} of {projects.length}:
+                                    Case study {i + 1} of {projects?.length}:
                                 </span>{" "}
                                 {proj?.title}
                             </h4>

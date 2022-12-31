@@ -31,7 +31,7 @@ export default function Header({socials}: Props) {
             }
         }
         className='flex flex-row items-center'> 
-            {socials.map((social,i)=> (
+            {socials?.map((social,i)=> (
                  <SocialIcon 
                  url={social.url} 
                  fgColor='gray' 

@@ -22,7 +22,7 @@ const Home =({pageInfo, experiences, skills,projects, socials}:Props)=> {
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
       <Head>
-        <title>{pageInfo?.name} - Portfolio</title>
+        <title>Portfolio</title>
       </Head>
       <Header socials={socials}/>
       <section id="hero" className='snap-start'>
@@ -63,8 +63,8 @@ const Home =({pageInfo, experiences, skills,projects, socials}:Props)=> {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async ()=> {
-    const pageInfo: PageInfo = await fetchPageInfo();
-    const experiences: Experience[] = await fetchExperiences();
+  const experiences: Experience[] = await fetchExperiences();
+  const pageInfo: PageInfo = await fetchPageInfo();
     const skills: Skill[]= await fetchSkills();
     const projects: Project[] = await fetchProjects();
     const socials: Social[] = await fetchSocials();
